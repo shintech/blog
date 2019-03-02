@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`COMPONENT -> ContactInfo - snapshot... expect to render correct properties 1`] = `
+<wrapper__Wrapper>
+  <li
+    className="email"
+  >
+    <a
+      href="mailto:undefined"
+      rel="noopener noreferrer"
+      target="_blank"
+    />
+  </li>
+  <li
+    className="repo"
+  >
+    <a
+      href="https://example.org/repo"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      author.name
+      /
+      name
+    </a>
+  </li>
+</wrapper__Wrapper>
+`;

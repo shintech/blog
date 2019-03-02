@@ -1,0 +1,88 @@
+{
+  "name": "blog-express",
+  "author": {
+    "name": "shintech",
+    "email": "support@shintech.ninja"
+  },
+  "version": "0.0.4",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://shintech.ninja",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mprather1/blog-express"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "isomorphic-unfetch": "^3.0.0",
+    "js-cookie": "^2.2.0",
+    "jsonwebtoken": "^8.4.0",
+    "marked": "^0.6.0",
+    "moment": "^2.24.0",
+    "next": "latest",
+    "next-page-transitions": "^1.0.0-alpha.4",
+    "next-redux-wrapper": "^2.0.0",
+    "next-routes": "^1.4.2",
+    "pg-promise": "^8.5.5",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-highlight": "^0.12.0",
+    "react-motion": "^0.5.2",
+    "react-redux": "~5.0.5",
+    "redux": "~3.7.2",
+    "redux-thunk": "~2.2.0",
+    "shintech-logger": "^0.0.3",
+    "shlogger": "^0.0.1",
+    "styled-components": "^3.4.9",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-inline-react-svg": "^1.0.1",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "deep-freeze": "^0.0.1",
+    "dotenv-webpack": "^1.5.7",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
+    "eslint": "^5.6.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "file-loader": "^2.0.0",
+    "jest": "^23.6.0",
+    "nock": "^10.0.0",
+    "remote-redux-devtools": "^0.5.13",
+    "sinon": "^7.1.1",
+    "supertest": "^3.3.0"
+  },
+  "scripts": {
+    "test:all": "jest --verbose -c config/jest/jest.config.js",
+    "test:server": "jest --verbose -c config/jest/jest.config.server.js",
+    "test:react": "jest --verbose -c config/jest/jest.config.react.js",
+    "build": "next build",
+    "build:watch:server": "babel ./server -d dist --watch",
+    "start": "NODE_ENV=production node .",
+    "dev": "JWT_SECRET=secret POSTGRES_URI=postgres://postgres:postgres@localhost:5432/api_development NODE_ENV=development PORT=8000 HOST=localhost SERVER=http://localhost:65330 BASE_URL=https://shintech.ninja EMAIL=email@example.org DOMAIN=shintech.ninja nodemon .",
+    "remotedev": "remotedev --hostname=localhost --port=9000",
+    "begin": "npm run build && npm start",
+    "lint": "eslint . --fix"
+  },
+  "standard": {
+    "globals": [
+      "React",
+      "_server",
+      "_treesMock"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+version: '3'
+
+services: 
+  blog:
+    build: .
+    container_name: blog
+    volumes:
+      - ./data/log/blog:/shintech/log
+      - ./data/files/blog:/shintech/static/files:ro
+    env_file:
+      - ./config/env/.env
+    ports:
+      - "8000:8000"
+    restart: always
+    links:
+      - blog-database
+
+  blog-database:
+    build: ./database
+    container_name: blog-database
+    env_file:
+        - ./config/env/blog.env
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    restart: always

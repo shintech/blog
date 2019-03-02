@@ -1,0 +1,10 @@
+const nextRoutes = require('next-routes')
+const routes = module.exports = nextRoutes()
+
+routes.add('index', '/')
+routes.add('about', '/about')
+routes.add('contact', '/contact')
+routes.add('blog', '/blog')
+routes.add('admin', '/admin')
+routes.add('auth', '/auth', 'auth')
+routes.add('post', '/blog/:id')
