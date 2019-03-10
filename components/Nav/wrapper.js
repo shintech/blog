@@ -2,27 +2,27 @@ import styled from 'styled-components'
 
 const Wrapper = styled.nav`
   overflow: hidden;
-  font-family: "Libre Franklin","Helvetica Neue",helvetica,arial,sans-serif;
-
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
-
+  top: 0; /* required */
+  z-index: 10;
+  border-top: 1px solid black;
   border-bottom: 1px solid black;
-  background-color: #222222;
 
   ul {
     padding: 0;
   }
-  
+
   a.nav-link {
     color: ${props => props.theme.text};
-    background-color: #222222;
     text-align: center;
     padding: 1.25ch;
     text-decoration: none;
     font-size: 2.5ch;
 
+    &:not(:last-child) {
+      border-right: 1px solid black;
+    }
 
     &.active {
       background-color: ${props => props.theme.active};
@@ -32,6 +32,10 @@ const Wrapper = styled.nav`
         background-color: ${props => props.theme.activeHover};
         color: ${props => props.theme.activeHoverText};
         cursor: not-allowed;
+      }
+      
+      &:last-child {
+        border-right: 1px solid black;
       }
     }
 
