@@ -8,7 +8,7 @@ const Wrapper = styled.nav`
   z-index: 10;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-
+  background-color: #222222;
   ul {
     padding: 0;
   }
