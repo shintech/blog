@@ -29,17 +29,18 @@ module.exports = (phase, { defaultConfig }) => {
             }
           }
         ]
-      },
-      {
-        test: /\.js$/,
-        enforce: 'pre',
-        exclude: [/node_modules/, '/.next'],
-        loader: 'eslint-loader',
-        options: {
-          emitError: false,
-          emitWarning: true,
-          failOnWarning: false
-        }
+      // },
+      // {
+      //   test: /\.js$/,
+      //   enforce: 'pre',
+      //   exclude: [/node_modules/, '/.next'],
+      //   loader: 'eslint-loader',
+      //   options: {
+      //     emitError: false,
+      //     emitWarning: true,
+      //     failOnWarning: false,
+      //     failOnError: false
+      //   }
       })
 
       return config
